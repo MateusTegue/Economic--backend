@@ -9,6 +9,10 @@ export class ProductoRepository {
         return ProductoModel.findById(id).populate('tipo_producto');
     }
 
+    async obtenerProductoCodigo(codigo: string){
+        return ProductoModel.findById(codigo).populate('tipo_producto');
+    }
+
     async registrarProducto(data: any){
         const producto = new ProductoModel(data);
         return producto.save();
