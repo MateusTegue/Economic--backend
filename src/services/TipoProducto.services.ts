@@ -20,6 +20,10 @@ export class TipoProductoService {
         return await this.tipoProductoRepository.obtenerTipoProductoId(id);
     }
 
+    async obtenerTipoProductoDescripcion(descripcion: string){
+        return await this.tipoProductoRepository.obtenerTipoProductoDescripcion(descripcion);
+    }
+
     async actualizarTipoProducto(id: string, data: any){
         return await this.tipoProductoRepository.actualizarTipoProducto(id, data);
     }

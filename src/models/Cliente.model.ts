@@ -1,7 +1,7 @@
 import mongoose from "mongoose";    
 
 const ClienteSchema = new mongoose.Schema({
-     indentificacion: {type: String, required: true, unique: true},
+     identificacion: {type: String, required: true, unique: true},
      primer_nombre: {type: String, required: true},
      segundo_nombre: {type: String},
      primer_apellido: {type: String, required: true},
