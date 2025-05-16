@@ -11,19 +11,27 @@ export class EmpleadoRepository {
         return await EmpleadoModel.find();
     }
 
-    async obtenerEmpleadoId(id: string){
-        return await EmpleadoModel.findById(id);
+    async obtenerEmpleadoId(_id: string){
+        return await EmpleadoModel.findById(_id);
+    }
+
+    async obtenerEmpleadoCedula(identificacion: string){
+        return await EmpleadoModel.findOne({ identificacion });
+    }
+
+    async obtenerEmpleadoPorUsuario(usuario: string) {
+        return await EmpleadoModel.findOne({ usuario });
     }
 
     async obtenerPorFiltro(filtro: FilterQuery<typeof EmpleadoModel>){
         return await EmpleadoModel.find(filtro);
     }
 
-    async actualizarEmpleado(id: string, data: any){
-        return await EmpleadoModel.findByIdAndUpdate(id, data, {new: true});
+    async actualizarEmpleado(_id: string, data: any){
+        return await EmpleadoModel.findByIdAndUpdate(_id, data, {new: true});
     }
 
-    async eliminarEmpleado(id: string){
-        return await EmpleadoModel.findByIdAndDelete(id);
+    async eliminarEmpleado(_id: string){
+        return await EmpleadoModel.findByIdAndDelete(_id);
     }
 }

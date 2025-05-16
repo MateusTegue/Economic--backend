@@ -17,16 +17,26 @@ export class EmpleadoService {
         return await this.empleadoRepository.obtenerEmpleados();
     }
 
-    async obtenerEmpleadoId(id: string){
-        return this.empleadoRepository.obtenerEmpleadoId(id);
+    async obtenerEmpleadoId(_id: string){
+        return this.empleadoRepository.obtenerEmpleadoId(_id);
     }
 
-    async actualizarEmpleado(id: string, data: any){
-        return this.empleadoRepository.actualizarEmpleado(id, data);
+    async obtenerEmpleadoCedula(identificacion: string){
+        return this.empleadoRepository.obtenerEmpleadoCedula(identificacion);
     }
 
-    async eliminarEmpleado(id: string){
-        return await this.empleadoRepository.eliminarEmpleado(id);
+    async obtenerEmpleadoPorUsuario(usuario: string){
+        return this.empleadoRepository.obtenerEmpleadoPorUsuario(usuario);
+    }
+
+
+
+    async actualizarEmpleado(_id: string, data: any){
+        return this.empleadoRepository.actualizarEmpleado(_id, data);
+    }
+
+    async eliminarEmpleado(_id: string){
+        return await this.empleadoRepository.eliminarEmpleado(_id);
     }
 
 }

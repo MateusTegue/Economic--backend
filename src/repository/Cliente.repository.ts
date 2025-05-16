@@ -15,6 +15,11 @@ export class ClienteRepository {
         return await ClienteModel.findById(id);
     }
 
+     async obtenerClienteCedula(identificacion: string){
+        return await ClienteModel.findOne({ identificacion });
+    }
+
+
     async obtenerPorFiltro(filtro: FilterQuery<typeof ClienteModel>){
         return await ClienteModel.find(filtro);
     }

@@ -15,7 +15,10 @@ export class TipoProductoRepository {
     }
 
     // el de buacar lo implementamos en otra ocacion
-
+    async obtenerTipoProductoDescripcion(descripcion: string) {
+        return await TipoProductoModel.findOne({ descripcion})
+    }
+   
     async actualizarTipoProducto(id: string, data: any){
         return await TipoProductoModel.findByIdAndUpdate(id, data, {new: true});
     }

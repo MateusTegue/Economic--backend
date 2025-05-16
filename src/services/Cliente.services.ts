@@ -21,6 +21,10 @@ export class ClienteService {
         return this.clienteRepository.obtenerClienteId(id);
     }
 
+    async obtenerClienteCedula(identificacion: string){
+        return this.clienteRepository.obtenerClienteCedula(identificacion);
+    }
+
     async actualizarCliente(id: string, data: any){
         return this.clienteRepository.actualizarCliente(id, data);
     }
