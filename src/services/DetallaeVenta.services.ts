@@ -1,5 +1,6 @@
 import { DetalleVentaReposytory } from "../repository/DetalleVenta.repository.ts";
 
+// implementacion de los cervices, los cuales consumen el repository
 export class DetalleVentaService {
 
   private detalleVentaRepository: DetalleVentaReposytory;

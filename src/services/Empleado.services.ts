@@ -1,6 +1,6 @@
 import { EmpleadoRepository } from "../repository/Empleado.repository.ts";
 
-
+// implementacion de los  sercives, los cuales consumen el repository
 export class EmpleadoService {
 
       private empleadoRepository: EmpleadoRepository;

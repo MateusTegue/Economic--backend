@@ -1,6 +1,7 @@
 import DetalleVentaModel from "../models/DetalleVenta.model.ts";
 import { FilterQuery } from "mongoose";
 
+// implementacion de la logica que estara accediendo a la base de datos 
 export class DetalleVentaReposytory {
     async registraDetalleventa(data: any){
         const detalle = new DetalleVentaModel(data)

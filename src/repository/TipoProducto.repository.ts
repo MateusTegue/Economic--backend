@@ -1,5 +1,6 @@
 import TipoProductoModel from "../models/TipoProducto.model.ts";
 
+// implemtacion de la logica que estara acceciendo a la base de datos 
 export class TipoProductoRepository {
     async registrarTipoProducto(data: any){
         const tipoProducto = new TipoProductoModel(data);

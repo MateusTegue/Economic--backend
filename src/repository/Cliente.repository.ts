@@ -1,6 +1,7 @@
 import ClienteModel from "../models/Cliente.model.ts";
 import { FilterQuery } from "mongoose";
 
+// implementacion de la logica que estara accediendo a la base de datos 
 export class ClienteRepository {
     async registrarCliente(data: any){
         const empleado = new ClienteModel(data);

@@ -1,6 +1,7 @@
 import VentaModel from "../models/Venta.model.ts";
 import { FilterQuery } from "mongoose";
 
+// implementacion de la logica que estara accediendo a la base de datos 
 export class VentaRepository {
     async registrarVenta(data: any){
         const venta = new VentaModel(data);

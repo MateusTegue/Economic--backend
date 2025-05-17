@@ -1,5 +1,6 @@
 import ProductoModel from "../models/Producto.model.ts";
 
+// implentacion de la logica que estara accediendo a la base de datos 
 export class ProductoRepository {
     async obtenerProductos(){
         return ProductoModel.find().populate('tipo_producto');

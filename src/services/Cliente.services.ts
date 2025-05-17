@@ -1,6 +1,6 @@
 import { ClienteRepository } from "../repository/Cliente.repository.ts";
 
-
+// implementacion de los cervices, los cuales consumen el repository
 export class ClienteService {
 
       private clienteRepository: ClienteRepository;

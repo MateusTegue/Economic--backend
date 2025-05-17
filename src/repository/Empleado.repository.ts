@@ -1,6 +1,7 @@
 import EmpleadoModel from "../models/Empleado.model.ts";
 import { FilterQuery } from "mongoose";
 
+// implementacion de la logica que estara accdediendo a la  base de datos 
 export class EmpleadoRepository {
     async registrarEmpleado(data: any){
         const empleado = new EmpleadoModel(data);

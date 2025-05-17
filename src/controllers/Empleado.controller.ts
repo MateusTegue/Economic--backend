@@ -51,10 +51,13 @@ export class EmpleadoController {
     // obtener empleados por id 
     obtenerEmpleadosId = async (req: Request, res: Response): Promise<any> => {
         try {
-            const empleado = await this.empleadoService.obtenerEmpleadoId(req.params._id);
+
+            const empleado = await this.empleadoService.obtenerEmpleadoId(req.params.id);
+
             if(!empleado){
-                return res.status(404).json({msg:"Empleado no encontrado"})
+                return res.status(404).json({msg: "Empleado no encontardo en el sistema!, intentelo nuevamente "})
             }
+         
             return res.status(200).json(empleado);
         }catch (error){
             console.error(error);
@@ -74,7 +77,7 @@ export class EmpleadoController {
     // actualizar empleados 
     actualizarEmpleado = async (req: Request, res: Response): Promise<any> => {
         try {
-            const empleadoActualizado = await this.empleadoService.actualizarEmpleado(req.params._id, req.body);
+            const empleadoActualizado = await this.empleadoService.actualizarEmpleado(req.params.id, req.body);
 
             if(!empleadoActualizado){
                 return res.status(404).json({msg: "Empleado no encontrado!"})
@@ -88,7 +91,7 @@ export class EmpleadoController {
     // eliminar empleados 
     eliminarEmpleado = async (req: Request, res: Response): Promise<any> => {
     try {
-        const empleadoEliminado = await this.empleadoService.eliminarEmpleado(req.params._id);
+        const empleadoEliminado = await this.empleadoService.eliminarEmpleado(req.params.id);
         if(!empleadoEliminado){
             return res.status(404).json({msg: "Empleado no encontrado!"});
         }
